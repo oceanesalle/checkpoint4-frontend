@@ -3,6 +3,7 @@ import axios from 'axios';
 import Coin from './Components/Coin/Coin';
 import { Routes, Route } from 'react-router-dom';
 import Contact from './Components/Contact/Contact';
+import Navbar from './Components/Navbar/Navbar';
 
 function App() {
   const [coins, setCoins] = useState([]);
@@ -57,6 +58,7 @@ function App() {
       })}
       <>
           <Routes>
+            <Navbar />
              <Route exact path="/" element={<Coin />} />
              <Route path="/contact" element={<Contact />} />
           </Routes>
