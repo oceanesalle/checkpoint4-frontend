@@ -1,0 +1,34 @@
+nav {
+  margin-top: 0;
+  background-color: #faefc6;
+  border-bottom: 2px solid #FF00FF;
+  position: fixed;
+  width: 100%;
+  top: 0;
+}
+
+nav ul {
+  display: flex;
+  justify-content: space-around;
+  margin: 0;
+  padding: 0;
+}
+
+nav li {
+  list-style: none;
+  align-self: center;
+  color: black;
+}
+
+a {
+  color: #FF00FF;
+  font-size: 20px;
+}
+
+a:link {
+  text-decoration: none;
+}
+
+a:hover {
+  color: pink;
+}

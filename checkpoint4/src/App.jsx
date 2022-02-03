@@ -2,8 +2,11 @@ import React, { useState, useEffect } from 'react';
 import axios from 'axios';
 import Coin from './Components/Coin/Coin';
 import { Routes, Route } from 'react-router-dom';
-import Contact from './Components/Contact/Contact';
 import Navbar from './Components/Navbar/Navbar';
+import Contact from './Components/Contact/Contact';
+import Login from './Components/Login/Login';
+
+import './App.css';
 
 function App() {
   const [coins, setCoins] = useState([]);
@@ -32,7 +35,7 @@ function App() {
   return (
     <div className='coin-app'>
       <div className='coin-search'>
-        <h1 className='coin-text'>Search a currency</h1>
+        <h1 className='coin-text'>All your cryptocurrency 💅🏽</h1>
         <form>
           <input
             className='coin-input'
@@ -57,12 +60,15 @@ function App() {
         );
       })}
       <>
+      <Navbar />
           <Routes>
-            <Navbar />
-             <Route exact path="/" element={<Coin />} />
-             <Route path="/contact" element={<Contact />} />
+            <Route path="/coin" element={<Coin />} />
+            <Route path="contact" element={<Contact />} />
+            <Route path="login" element={<Login/>} />
           </Routes>
-          </>
+        
+      </>
+          
     </div>
   );
 }

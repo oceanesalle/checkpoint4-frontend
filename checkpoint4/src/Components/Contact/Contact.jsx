@@ -1,3 +1,4 @@
+import './Contact.css';
 import emailjs from "emailjs-com";
 
 const Contact = () => {
@@ -21,7 +22,16 @@ const Contact = () => {
           <input
             type="text"
             className="texte"
-            placeholder="What is it about?"
+            placeholder="Name"
+            name="subject"
+            required="required"
+          />
+        </div>
+        <div className="divInput">
+          <input
+            type="text"
+            className="texte"
+            placeholder="Subject"
             name="subject"
             required="required"
           />
@@ -30,7 +40,7 @@ const Contact = () => {
           <input
             type="email"
             className="texte"
-            placeholder="Type your email adress here."
+            placeholder="Email"
             name="email"
             required="required"
           />
