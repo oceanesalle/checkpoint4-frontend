@@ -1,7 +1,8 @@
 import React, { useState, useEffect } from 'react';
 import axios from 'axios';
-import './App.css';
-import Coin from './Coin';
+import Coin from './Components/Coin/Coin';
+import { Routes, Route } from 'react-router-dom';
+import Contact from './Components/Contact/Contact';
 
 function App() {
   const [coins, setCoins] = useState([]);
@@ -54,6 +55,12 @@ function App() {
           />
         );
       })}
+      <>
+          <Routes>
+             <Route exact path="/" element={<Coin />} />
+             <Route path="/contact" element={<Contact />} />
+          </Routes>
+          </>
     </div>
   );
 }
